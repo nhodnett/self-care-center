@@ -34,8 +34,10 @@ var mantras = [
 "I am the sky, the rest is weather."
 ]
 // functions and event handlers go here
-
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+};
 // User selects affirmation or mantra
-// Clicks "Recieve Message Button"
-// Website generates a random message
+// Clicks "Receive Message Button"
+// Website generates a random message`
 // Meditation Icon disappears
