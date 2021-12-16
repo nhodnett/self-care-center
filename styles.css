@@ -6,3 +6,46 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+html {
+  height: 100vh
+}
+
+body {
+  margin: auto;
+  text-align: center;
+  background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+  font-family: 'Quicksand', sans-serif;
+  color: #ffffff;
+  }
+
+h1 {
+  padding-top: 25px;
+  padding-bottom: 50px;
+}
+
+.container {
+  margin: auto;
+  text-align: center;
+  background-color: white;
+  width: 400px;
+  height: 80px;
+  border-radius: 8px;
+
+}
+
+button {
+  margin: 20px;
+  background-color: #134d71;
+  border: 1px solid black;;
+  border-radius: 4px;
+  color: #ffffff;
+  padding: 5px 20px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 12px;
+}
+
+label {
+  color: #000000;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 12px;
+}
