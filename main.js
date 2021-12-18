@@ -36,7 +36,7 @@ var selectAffirmationButton = document.querySelector('#affirmation'); //Syntax?
 var selectMantraButton = document.querySelector('#mantra'); //Syntax?
 var receiveMessageButton = document.querySelector('.receive-message');
 var randomMessageDisplay = document.querySelector('.random-message-display');
-
+var image = document.querySelector('.main-image')
 // Event Listeners go here
 //selectAffirmationButton.addEventListener('click', showAffirmation);
 //selectMantraButton.addEventListener('click', showMantra);
@@ -52,15 +52,27 @@ function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 };
 
+// function show(img) {
+//   image.classList.remove('hidden');
+// }
+//
+// function hide(randomMessage) {
+//   randomMessage.classList.add('hidden');
+// }
+
 function randomMessage(event) {
   event.preventDefault()
   var newAffirmation = affirmations[getRandomIndex(affirmations)];
   var newMantra = mantras[getRandomIndex(mantras)];
   if (selectAffirmationButton.checked === true) {
   randomMessageDisplay.innerText = `${newAffirmation}`;
+  image.classList.add('hidden');
+  randomMessageDisplay.classList.remove('hidden');
   // show affirmation
   } else if (selectMantraButton.checked === true) {
   randomMessageDisplay.innerText = `${newMantra}`;
+  image.classList.add('hidden');
+  randomMessageDisplay.classList.remove('hidden');
   // show mantra
   }
 }
