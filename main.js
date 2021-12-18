@@ -1,5 +1,3 @@
-// query selector variables go here
-
 // data to work with - affirmations or mantras
 var affirmations = [
 "I forgive myself and set myself free.",
@@ -33,11 +31,45 @@ var mantras = [
 "Onward and upward.",
 "I am the sky, the rest is weather."
 ]
+// Query Selectors go here
+var selectAffirmationButton = document.querySelector('#affirmation'); //Syntax?
+var selectMantraButton = document.querySelector('#mantra'); //Syntax?
+var receiveMessageButton = document.querySelector('.receive-message');
+var randomMessageDisplay = document.querySelector('.random-message-display');
+
+// Event Listeners go here
+//selectAffirmationButton.addEventListener('click', showAffirmation);
+//selectMantraButton.addEventListener('click', showMantra);
+receiveMessageButton.addEventListener('click', randomMessage);
+
+// if affirmation.checked... Conditional Statement
+
+// if mantra.checked... Conditional statement
+
+
 // functions and event handlers go here
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 };
-// User selects affirmation or mantra
-// Clicks "Receive Message Button"
-// Website generates a random message`
+
+function randomMessage(event) {
+  event.preventDefault()
+  var newAffirmation = affirmations[getRandomIndex(affirmations)];
+  var newMantra = mantras[getRandomIndex(mantras)];
+  if (selectAffirmationButton.checked === true) {
+  randomMessageDisplay.innerText = `${newAffirmation}`;
+  // show affirmation
+  } else if (selectMantraButton.checked === true) {
+  randomMessageDisplay.innerText = `${newMantra}`;
+  // show mantra
+  }
+}
+
+//console.log(newAffirmation,'Affirmation')
+//console.log(newMantra, 'Mantra')
+// How to invoke this function?
+//randomMessage(newAffirmation, newMantra); No...
+//Query Selector for image
+// classList .add . remove .toggle
 // Meditation Icon disappears
+// Can it be done athe same time as message appearing ''?
