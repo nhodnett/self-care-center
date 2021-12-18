@@ -6,3 +6,81 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+/* display: flex */
+
+html {
+  height: 100vh
+}
+
+body {
+  margin: auto;
+  text-align: center;
+  background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+  font-family: 'Quicksand', sans-serif;
+  color: #ffffff;
+  }
+
+h1 {
+  padding-top: 25px;
+  padding-bottom: 50px;
+}
+
+.container1 {
+  margin: auto;
+  text-align: center;
+  background-color: white;
+  color: #000000;
+  width: 400px;
+  height: 80px;
+  border-radius: 8px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.message-inputs {
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  margin: 20px;
+  background-color: #134d71;
+  border: 1px solid black;;
+  border-radius: 4px;
+  color: #ffffff;
+  padding: 5px 20px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+label {
+  color: #000000;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 12px;
+}
+
+.container2 {
+  margin-left: 390px;
+  margin-top:75px;
+  border: 10px;
+  padding: 10px;
+  text-align: center;
+  color: black;
+  background-color: white;
+  width: 600px;
+  height: 100px;
+  border-radius: 8px;
+}
+
+.hidden {
+  display: none;
+}
+
+#img {
+  image-orientation: center;
+  height: 85%;
+  width: auto;
+}
