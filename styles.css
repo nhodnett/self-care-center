@@ -34,17 +34,21 @@ h1 {
   width: 400px;
   height: 80px;
   border-radius: 8px;
-  flex-direction: column;
-  justify-content: center;
 }
 
-.message-inputs {
+.inputs {
+  margin: auto;
+  padding-top: 10px;
+  width: 400px;
+  height: 25px;
   display: flex;
   justify-content: space-around;
-}
+  font-family: 'Quicksand', sans-serif;
+  font-size: 12px;
+  }
 
-button {
-  margin: 20px;
+.receive-message {
+  margin-top: 5px;
   background-color: #134d71;
   border: 1px solid black;;
   border-radius: 4px;
@@ -52,20 +56,12 @@ button {
   padding: 5px 20px;
   font-family: 'Quicksand', sans-serif;
   font-size: 12px;
-  display: flex;
-  justify-content: center;
-}
-
-label {
-  color: #000000;
-  font-family: 'Quicksand', sans-serif;
-  font-size: 12px;
 }
 
 .container2 {
-  margin-left: 390px;
+  margin: auto;
   margin-top:75px;
-  border: 10px;
+  border: 50px;
   padding: 10px;
   text-align: center;
   color: black;
@@ -83,4 +79,5 @@ label {
   image-orientation: center;
   height: 85%;
   width: auto;
+  margin-bottom: 25px;
 }
