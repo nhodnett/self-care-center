@@ -37,28 +37,14 @@ var selectMantraButton = document.querySelector('#mantra'); //Syntax?
 var receiveMessageButton = document.querySelector('.receive-message');
 var randomMessageDisplay = document.querySelector('.random-message-display');
 var image = document.querySelector('.main-image')
+
 // Event Listeners go here
-//selectAffirmationButton.addEventListener('click', showAffirmation);
-//selectMantraButton.addEventListener('click', showMantra);
 receiveMessageButton.addEventListener('click', randomMessage);
-
-// if affirmation.checked... Conditional Statement
-
-// if mantra.checked... Conditional statement
-
 
 // functions and event handlers go here
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 };
-
-// function show(img) {
-//   image.classList.remove('hidden');
-// }
-//
-// function hide(randomMessage) {
-//   randomMessage.classList.add('hidden');
-// }
 
 function randomMessage(event) {
   event.preventDefault()
@@ -68,20 +54,9 @@ function randomMessage(event) {
   randomMessageDisplay.innerText = `${newAffirmation}`;
   image.classList.add('hidden');
   randomMessageDisplay.classList.remove('hidden');
-  // show affirmation
   } else if (selectMantraButton.checked === true) {
   randomMessageDisplay.innerText = `${newMantra}`;
   image.classList.add('hidden');
   randomMessageDisplay.classList.remove('hidden');
-  // show mantra
   }
 }
-
-//console.log(newAffirmation,'Affirmation')
-//console.log(newMantra, 'Mantra')
-// How to invoke this function?
-//randomMessage(newAffirmation, newMantra); No...
-//Query Selector for image
-// classList .add . remove .toggle
-// Meditation Icon disappears
-// Can it be done athe same time as message appearing ''?

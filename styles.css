@@ -42,7 +42,7 @@ h1 {
   width: 400px;
   height: 25px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   font-family: 'Quicksand', sans-serif;
   font-size: 12px;
   }
