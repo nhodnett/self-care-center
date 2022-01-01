@@ -37,26 +37,57 @@ var selectMantraButton = document.querySelector('#mantra'); //Syntax?
 var receiveMessageButton = document.querySelector('.receive-message');
 var randomMessageDisplay = document.querySelector('.random-message-display');
 var image = document.querySelector('.main-image')
+var clearMessageButton = document.querySelector('.clear-message');
 
 // Event Listeners go here
 receiveMessageButton.addEventListener('click', randomMessage);
+clearMessageButton.addEventListener('click', clearMessage);
 
 // functions and event handlers go here
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 };
 
+function show(element) {
+  element.classList.remove('hidden');
+};
+
+function hide(element) {
+  element.classList.add('hidden');
+};
+
+var newAffirmation;
+var newMantra;
+
 function randomMessage(event) {
   event.preventDefault()
-  var newAffirmation = affirmations[getRandomIndex(affirmations)];
-  var newMantra = mantras[getRandomIndex(mantras)];
-  if (selectAffirmationButton.checked === true) {
-  randomMessageDisplay.innerText = `${newAffirmation}`;
-  image.classList.add('hidden');
-  randomMessageDisplay.classList.remove('hidden');
+  newAffirmation = affirmations[getRandomIndex(affirmations)];
+  newMantra = mantras[getRandomIndex(mantras)];
+  // console.log(newAffirmation, newMantra)
+    if (selectAffirmationButton.checked === true) {
+      randomMessageDisplay.innerText = `${newAffirmation}`;
+      hide(image);
+      show(randomMessageDisplay);
+      show(clearMessageButton);
+      //image.classList.add('hidden');
+      //randomMessageDisplay.classList.remove('hidden');
   } else if (selectMantraButton.checked === true) {
-  randomMessageDisplay.innerText = `${newMantra}`;
-  image.classList.add('hidden');
-  randomMessageDisplay.classList.remove('hidden');
+      randomMessageDisplay.innerText = `${newMantra}`;
+      show(randomMessageDisplay);
+      hide(image);
+      show(clearMessageButton);
+      //image.classList.add('hidden');
+      //randomMessageDisplay.classList.remove('hidden');
+  }
+}
+
+function clearMessage() {
+  if (newAffirmation || newMantra === true) {
+    newAffirmation = '';
+    newMantra = '';
+    hide(randomMessageDisplay);
+    show(image);
+    hide(clearMessageButton);
+//console.log(newAffirmation, newMantra)
   }
 }
