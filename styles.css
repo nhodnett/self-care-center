@@ -81,3 +81,14 @@ h1 {
   width: auto;
   margin-bottom: 25px;
 }
+
+.clear-message {
+  margin-top: 5px;
+  background-color: #134d71;
+  border: 1px solid black;;
+  border-radius: 4px;
+  color: #ffffff;
+  padding: 5px 20px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 12px;
+}
